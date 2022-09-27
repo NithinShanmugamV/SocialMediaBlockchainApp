@@ -3,6 +3,7 @@ import "./Home.css";
 import { defaultImgs } from "../defaultimgs";
 import { Icon, TextArea } from "web3uikit";
 import { useState, useRef } from "react";
+import TweetInFeed from "../components/TweetInFeed";
 const Home = () => {
   const inputFile = useRef(null);
   const [selectedFile, setSelectedFile] = useState();
@@ -18,6 +19,7 @@ const Home = () => {
 
   return (
     <>
+      <div className="pageIdentify">Home</div>
       <div className="mainContent">
         <div className="profileTweet">
           <img src={defaultImgs[0]} className="profilePic"></img>
@@ -25,7 +27,7 @@ const Home = () => {
             <TextArea
               label=""
               name="tweetTxtArea"
-              value="GM World"
+              value="Type your tweet Nithin"
               type="text"
               width="95%"
             ></TextArea>
@@ -53,6 +55,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <TweetInFeed profile={false} />
       </div>
     </>
   );
